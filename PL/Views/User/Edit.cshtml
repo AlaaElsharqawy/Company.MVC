@@ -1,0 +1,53 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+
+
+
+
+
+<h1>Edit @Model.FName @Model.LName User</h1>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+
+    <div asp-validation-summary="All"></div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="FName"></label>
+    <input  class="form-control" asp-for="FName" />
+        <span asp-validation-for="FName" class="text-danger"></span>
+
+</div>
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="LName"></label>
+    <input  class="form-control" asp-for="LName" />
+        <span asp-validation-for="LName" class="text-danger"></span>
+
+</div>
+
+
+<div class="form-group">
+    <label class="col-form-label" asp-for="PhoneNumber"></label>
+    <input  class="form-control" asp-for="PhoneNumber" />
+        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+
+</div>
+
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Roles"></label>
+        <input class="form-control" asp-for="Roles" />
+        <span asp-validation-for="Roles" class="text-danger"></span>
+
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-primary" /> |
+    <a asp-action="Index" asp-controller="User" class="btn btn-light">Back To List</a>
+
+
+
+</form>
+

@@ -1,0 +1,52 @@
+﻿@model UserViewModel
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Are You Sure You Want To Delete @Model.FName @Model.LName ??</h1>
+
+@* show Error Message*@
+<div asp-validation-summary="All"></div>
+
+<form asp-action="ConfirmDelete" >
+
+
+    <div class="form-group">
+    <label class="col-form-label" asp-for="Id"></label>
+    <input readonly class="form-control" asp-for="Id" />
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="FName"></label>
+        <input readonly class="form-control" asp-for="FName" />
+
+    </div>
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="LName"></label>
+        <input readonly class="form-control" asp-for="LName" />
+
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Email"></label>
+        <input readonly class="form-control" asp-for="Email" />
+
+    </div>
+
+
+
+    <div class="form-group">
+        <label class="col-form-label" asp-for="PhoneNumber"></label>
+        <input readonly class="form-control" asp-for="PhoneNumber" />
+
+    </div>
+
+    <input type="submit" value="Delete" class="btn btn-danger" />|
+
+    <a asp-action="Index" asp-controller="User" class="btn btn-secondary">Cancel</a>
+
+
+</form>
